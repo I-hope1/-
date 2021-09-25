@@ -1,0 +1,85 @@
+:root {
+	--unit: 10px;
+}
+
+body {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	flex-direction: column;
+	user-select: none;
+}
+
+#result {
+	font-size: 32px;
+}
+
+#content {
+	width: calc(var(--unit) * var(--width));
+	height: calc(var(--unit) * var(--height));
+	display: flex;
+	overflow: hidden;
+	flex-wrap: wrap;
+	background: #333;
+}
+
+#content div {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	width: var(--unit);
+	height: var(--unit);
+	box-sizing: border-box;
+	background: transparent;
+}
+
+#content div.show {
+	background: #fff;
+	border: 1px solid #333;
+}
+
+#content div.left {
+	border-left: 1px solid #fff;
+}
+#content div.right {
+	border-right: 1px solid #fff;
+}
+#content div.top {
+	border-top: 1px solid #fff;
+}
+#content div.bottom {
+	border-bottom: 1px solid #fff;
+}
+#content div.head.left {
+	border: 1px solid #333;
+	border-bottom: 1px solid #fff;
+	transform: rotate(90deg);
+}
+#content div.head.right {
+	border: 1px solid #333;
+	border-bottom: 1px solid #fff;
+	transform: rotate(270deg);
+}
+#content div.head.top {
+	border: 1px solid #333;
+	border-bottom: 1px solid #fff;
+	transform: rotate(180deg);
+}
+#content div.head.bottom {
+	border: 1px solid #333;
+	border-bottom: 1px solid #fff;
+	transform: rotate(0deg);
+}
+
+#content div.head {
+	background: url(./eyes.png), #fff;
+	background-position: 50% 50%;
+}
+#content div.food {
+	background: #cfc;
+	border: 1px solid #333;
+}
